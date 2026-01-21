@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony Vieira - Créateur de Sites Web</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3em;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        .section-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 300;
+            position: relative;
+            padding-bottom: 20px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: #000;
+        }
+
+        .about {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        .project-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2em;
+            color: #666;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+
+        .project-card:nth-child(1) .project-img {
+            background: linear-gradient(135deg, #d4a574 0%, #c89b66 100%);
+            color: white;
+        }
+
+        .project-card:nth-child(2) .project-img {
+            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+            color: white;
+        }
+
+        .project-card:nth-child(3) .project-img {
+            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
+            color: white;
+        }
+
+        .project-info {
+            padding: 25px;
+        }
+
+        .project-info h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .project-info p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: #f0f0f0;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            margin-right: 8px;
+            margin-top: 5px;
+        }
+
+        .services {
+            background: #f9f9f9;
+            padding: 60px 20px;
+            margin: 60px 0;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-item {
+            text-align: center;
+            padding: 30px;
+        }
+
+        .service-item h3 {
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            font-weight: 400;
+        }
+
+        .contact {
+            text-align: center;
+            padding: 60px 20px;
+            background: #1a1a1a;
+            color: white;
+        }
+
+        .contact h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-weight: 300;
+        }
+
+        .contact p {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: white;
+            color: #1a1a1a;
+            padding: 15px 40px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 1.1em;
+            font-weight: 500;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .contact-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255,255,255,0.3);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #0a0a0a;
+            color: #888;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .section-title {
+                font-size: 2em;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>TONY VIEIRA</h1>
+        <p>Créateur de Sites Web Modernes</p>
+    </header>
+
+    <div class="container">
+        <div class="about">
+            <p>Je crée des sites web professionnels, modernes et optimisés pour votre entreprise. Spécialisé dans les sites vitrines, landing pages et boutiques en ligne simples, je transforme vos idées en présence digitale impactante.</p>
+        </div>
+
+        <h2 class="section-title">Mes Réalisations</h2>
+        <div class="projects">
+            <div class="project-card">
+                <div class="project-img">RESTAURANT</div>
+                <div class="project-info">
+                    <h3>Le Bistrot Parisien</h3>
+                    <p>Site vitrine pour restaurant avec menu interactif, galerie photos et réservation en ligne.</p>
+                    <span class="project-tag">Site Vitrine</span>
+                    <span class="project-tag">Responsive</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">LUXURY WATCHES</div>
+                <div class="project-info">
+                    <h3>LuxTime Watches</h3>
+                    <p>Landing page e-commerce pour boutique de montres haut de gamme avec catalogue produits.</p>
+                    <span class="project-tag">E-commerce</span>
+                    <span class="project-tag">Landing Page</span>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-img">REAL ESTATE</div>
+                <div class="project-info">
+                    <h3>Prestige Immobilier</h3>
+                    <p>Page d'accueil moderne pour agence immobilière avec recherche de biens et présentation services.</p>
+                    <span class="project-tag">Immobilier</span>
+                    <span class="project-tag">Design Clean</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Services</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>Sites Vitrine</h3>
+                    <p>Présentez votre activité avec un design moderne et professionnel</p>
+                </div>
+                <div class="service-item">
+                    <h3>Landing Pages</h3>
+                    <p>Pages optimisées pour convertir vos visiteurs en clients</p>
+                </div>
+                <div class="service-item">
+                    <h3>E-commerce Simple</h3>
+                    <p>Boutiques en ligne claires et efficaces pour vendre vos produits</p>
+                </div>
+                <div class="service-item">
+                    <h3>Design Responsive</h3>
+                    <p>Sites parfaitement adaptés à tous les écrans (mobile, tablette, PC)</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h2>Prêt à démarrer votre projet ?</h2>
+        <p>Contactez-moi pour discuter de vos besoins</p>
+        <a href="mailto:tony.vieira651@gmail.com" class="contact-btn">tony.vieira651@gmail.com</a>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Tony Vieira - Créateur de Sites Web</p>
+    </footer>
+</body>
+</html>
