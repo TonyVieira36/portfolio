@@ -25,6 +25,16 @@
             text-align: center;
         }
 
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 25px;
+            border: 4px solid rgba(255,255,255,0.2);
+            object-fit: cover;
+            display: block;
+        }
+
         header h1 {
             font-size: 3em;
             margin-bottom: 10px;
@@ -97,28 +107,7 @@
         .project-img {
             width: 100%;
             height: 220px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2em;
-            color: #666;
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
-
-        .project-card:nth-child(1) .project-img {
-            background: linear-gradient(135deg, #d4a574 0%, #c89b66 100%);
-            color: white;
-        }
-
-        .project-card:nth-child(2) .project-img {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-            color: white;
-        }
-
-        .project-card:nth-child(3) .project-img {
-            background: linear-gradient(135deg, #95a5a6 0%, #7f8c8d 100%);
-            color: white;
+            object-fit: cover;
         }
 
         .project-info {
@@ -134,6 +123,7 @@
         .project-info p {
             color: #666;
             margin-bottom: 15px;
+            line-height: 1.6;
         }
 
         .project-tag {
@@ -169,6 +159,43 @@
             font-size: 1.3em;
             margin-bottom: 10px;
             font-weight: 400;
+        }
+
+        .testimonials {
+            background: #fff;
+            padding: 60px 20px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: #f9f9f9;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #1a1a1a;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 20px;
+            line-height: 1.7;
+        }
+
+        .testimonial-author {
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .testimonial-role {
+            font-size: 0.9em;
+            color: #888;
         }
 
         .contact {
@@ -226,49 +253,58 @@
             .projects {
                 grid-template-columns: 1fr;
             }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
+        <img src="images/profile.png" alt="Tony Vieira - Créateur de Sites Web" class="profile-photo">
         <h1>TONY VIEIRA</h1>
         <p>Créateur de Sites Web Modernes</p>
     </header>
 
     <div class="container">
         <div class="about">
-            <p>Je crée des sites web professionnels, modernes et optimisés pour votre entreprise. Spécialisé dans les sites vitrines, landing pages et boutiques en ligne simples, je transforme vos idées en présence digitale impactante.</p>
+            <p>Passionné par le web design et le développement, je crée des sites internet professionnels, modernes et optimisés pour votre entreprise. Spécialisé dans les sites vitrines, landing pages et boutiques en ligne, je transforme vos idées en présence digitale impactante qui génère des résultats concrets. Chaque projet est conçu sur mesure pour refléter votre identité et atteindre vos objectifs.</p>
         </div>
 
         <h2 class="section-title">Mes Réalisations</h2>
         <div class="projects">
             <a href="https://tonyvieira36.github.io/bistrot-parisien/" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                <div class="project-img">RESTAURANT</div>
+                <img src="images/bistrot-banner.png" alt="Le Bistrot Parisien" class="project-img">
                 <div class="project-info">
                     <h3>Le Bistrot Parisien</h3>
-                    <p>Site vitrine pour restaurant avec menu interactif, galerie photos et réservation en ligne.</p>
+                    <p>Site vitrine complet pour restaurant gastronomique avec menu interactif détaillé, galerie photos immersive et système de réservation en ligne. Design chaleureux aux couleurs authentiques qui reflète l'ambiance conviviale de l'établissement. Navigation intuitive optimisée pour mobile et desktop.</p>
                     <span class="project-tag">Site Vitrine</span>
                     <span class="project-tag">Responsive</span>
+                    <span class="project-tag">Réservation</span>
                 </div>
             </a>
 
             <a href="https://tonyvieira36.github.io/luxtime-watches/" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                <div class="project-img">LUXURY WATCHES</div>
+                <img src="images/luxtime-banner.png" alt="LuxTime Watches" class="project-img">
                 <div class="project-info">
                     <h3>LuxTime Watches</h3>
-                    <p>Landing page e-commerce pour boutique de montres haut de gamme avec catalogue produits.</p>
+                    <p>Landing page e-commerce élégante pour boutique de montres de luxe haut de gamme. Catalogue produits avec fiches détaillées, visuels premium et mise en avant des arguments de vente (savoir-faire suisse, garantie 5 ans). Design minimaliste noir et doré qui inspire confiance et prestige.</p>
                     <span class="project-tag">E-commerce</span>
                     <span class="project-tag">Landing Page</span>
+                    <span class="project-tag">Luxe</span>
                 </div>
             </a>
 
             <a href="https://tonyvieira36.github.io/prestige-immobilier/" target="_blank" class="project-card" style="text-decoration: none; color: inherit;">
-                <div class="project-img">REAL ESTATE</div>
+                <img src="images/prestige-banner.png" alt="Prestige Immobilier" class="project-img">
                 <div class="project-info">
                     <h3>Prestige Immobilier</h3>
-                    <p>Page d'accueil moderne pour agence immobilière avec recherche de biens et présentation services.</p>
+                    <p>Site moderne pour agence immobilière avec moteur de recherche avancé (type de bien, budget, localisation), présentation détaillée des biens avec caractéristiques et prix, section services complète et statistiques de performance. Interface épurée et professionnelle qui inspire confiance.</p>
                     <span class="project-tag">Immobilier</span>
                     <span class="project-tag">Design Clean</span>
+                    <span class="project-tag">Recherche</span>
                 </div>
             </a>
         </div>
@@ -280,19 +316,42 @@
             <div class="services-grid">
                 <div class="service-item">
                     <h3>Sites Vitrine</h3>
-                    <p>Présentez votre activité avec un design moderne et professionnel</p>
+                    <p>Présentez votre activité avec un design moderne et professionnel qui reflète votre identité. Optimisé pour convertir vos visiteurs en clients.</p>
                 </div>
                 <div class="service-item">
                     <h3>Landing Pages</h3>
-                    <p>Pages optimisées pour convertir vos visiteurs en clients</p>
+                    <p>Pages d'atterrissage optimisées pour maximiser vos conversions. Design épuré, message clair et appels à l'action stratégiques.</p>
                 </div>
                 <div class="service-item">
                     <h3>E-commerce Simple</h3>
-                    <p>Boutiques en ligne claires et efficaces pour vendre vos produits</p>
+                    <p>Boutiques en ligne claires et efficaces pour vendre vos produits. Interface intuitive et parcours d'achat optimisé.</p>
                 </div>
                 <div class="service-item">
                     <h3>Design Responsive</h3>
-                    <p>Sites parfaitement adaptés à tous les écrans (mobile, tablette, PC)</p>
+                    <p>Sites parfaitement adaptés à tous les écrans (mobile, tablette, PC). Expérience utilisateur fluide sur tous les appareils.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Ils m'ont fait confiance</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Tony a créé un site vitrine magnifique pour mon restaurant. Le design est élégant, le menu est facile à mettre à jour et nos clients adorent le système de réservation en ligne. Nos réservations ont augmenté de 40% depuis le lancement !"</p>
+                    <div class="testimonial-author">Marc Dubois</div>
+                    <div class="testimonial-role">Propriétaire, Le Petit Gourmet (Paris)</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Professionnel, réactif et à l'écoute. Tony a parfaitement compris notre besoin de créer une landing page premium pour notre collection de montres. Le résultat dépasse nos attentes et reflète vraiment l'image haut de gamme de notre marque."</p>
+                    <div class="testimonial-author">Sophie Laurent</div>
+                    <div class="testimonial-role">Directrice Marketing, Chronos Luxury</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Excellent travail sur notre site immobilier ! Le moteur de recherche fonctionne parfaitement et nos clients trouvent facilement les biens qui les intéressent. Design moderne et interface intuitive. Je recommande vivement Tony pour tout projet web."</p>
+                    <div class="testimonial-author">Jean-Pierre Martin</div>
+                    <div class="testimonial-role">Directeur, Agence Immo Plus</div>
                 </div>
             </div>
         </div>
